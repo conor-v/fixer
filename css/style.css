@@ -1,0 +1,412 @@
+@font-face {
+  font-family: "fjalla-one";
+  src: url("../assets/fonts/fjalla-one/fjalla-one-v5-latin-regular.woff2") format("woff2"),
+    url("../assets/fonts/fjalla-one/fjalla-one-v5-latin-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+  
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  background-color: #cacde4;
+}
+
+.hidden {
+  display: none;
+}
+
+/************************
+MIJN NAV HEADER EN FOOTER
+************************/
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  padding: 2rem 0;
+  background-color: #cacde4;
+}
+
+.menu__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 96rem;
+  margin: 0 auto;
+}
+
+.menu__items {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item__link {
+  text-decoration: none;
+  margin-right: 4rem;
+  font-size: 2rem;
+  color: #131550;
+}
+
+.menu__item__link:hover {
+  color: #0966cc;
+  transition: .4s;
+}
+
+.contact__link{
+  background-color: #0966cc;
+  color: #fff;
+  display: block;
+  padding: .5rem 2.5rem;
+  border-radius: 2rem;
+  margin: 0;
+}
+
+.contact__link:hover {
+  background-color: #fff;
+  color: #0966cc;
+  border-radius: 3rem;
+  border: #0966cc solid;
+}
+
+.active--link {
+  border-bottom: #0966cc solid .2rem;
+  padding-bottom: .5rem;
+}
+
+.header__box {
+  padding-top: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 96rem;
+  margin-bottom: 10rem;
+}
+
+.header__box__intro {
+  width: 34rem;
+}
+
+.header__box__title {
+  color: #1d427e;
+  font-family: fjalla-one;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+} 
+
+.header__box__text {
+  color: #131550;
+  margin-bottom: 2.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.button {
+  display: block;
+  background-color: #0966cc;
+  color: #fff;
+  text-decoration: none;
+  width: 13rem;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #0966cc;
+  border: .2rem solid #0966cc;
+  border-radius: 3rem;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+}
+
+.footer {
+  background: #131550;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 12rem 0 3rem 0;
+}
+
+.footer__box {
+  display: flex;
+  width: 18rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.footer__box__text {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.footer__box__img {
+  width: 4rem;
+}
+
+.footer__box__img--groter {
+   width: 5rem;
+}
+
+/***************
+INFO,SPEC,RATING
+***************/
+.space {
+  margin-bottom: 10rem;
+}
+
+.info {
+  background-color: #4177bc;
+  padding: 10rem 0;
+}
+
+.info__div--wrapper {
+  display: flex;
+  width: 96rem;
+  margin: 0 auto;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.info__box {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  color: #fff;
+}
+
+.info__box__title {
+  font-family: fjalla-one;
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.info__box__text {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.spec {
+  width: 96rem;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spec__article {
+  width: 35rem;
+}
+
+.spec__article__title {
+  font-family: fjalla-one;
+  font-size: 3.5rem;
+  color: #1d427e;
+}
+
+.spec__article__subtitle {
+  font-family: fjalla-one;
+  font-size: 2.5rem;
+  color: #161644;
+  margin: 1rem 0;
+}
+
+.spec__article__text {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.snoepjes {
+  display: flex;
+  justify-content: space-between;
+  width: 56rem;
+}
+
+.snoep::before {
+  content: url('../assets/img/rating-snoepje-leeg.png');
+  cursor: pointer;
+}
+
+.snoep.vol::before {
+  content: url('../assets/img/rating-snoepje-vol.png');
+}
+
+.text__rating {
+  color: #161644;
+  font-size: 3rem;
+  text-align: center;
+  margin: 4rem 0;
+  font-weight: 600;
+  font-family: fjalla-one;
+}
+
+.rating__form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 18rem;
+}
+
+/************
+MIJN SERVICES
+************/
+.services {
+  width: 96rem;
+  margin: 0 auto;
+  background-image: url("../assets/img/services.png");
+  background-repeat: no-repeat;
+  height: 191rem;
+  margin-bottom: 10rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.service {
+  width: 32rem;
+  margin: 10rem 0 0 3rem;
+}
+
+.service-1 {
+  grid-area: 1 / 2;
+}
+
+.service-2 {
+  grid-area: 2 / 1;
+}
+
+.service-3 {
+  grid-area: 3 / 2;
+}
+
+.service-4 {
+  grid-area: 4 / 1;
+}
+
+.service__title {
+  font-family: fjalla-one;
+  color: #1d427e;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.service__text {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+/*************************
+FORM CSS VOOR CONTACT PAGE
+*************************/
+.form__container {
+  width: 75rem;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+}
+
+.container__form {
+  width: 70rem;
+  margin: 0 auto;
+}
+
+.label {
+  display: flex;
+  flex-flow: column;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background: none;
+  border: #161644 solid .2rem;
+  border-radius: 2rem;
+  margin: 1rem 0;
+  margin-left: -1rem;
+  color:#1d427e;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 1.2rem;
+}
+ 
+.form__text__eenrij {
+  height: 5rem;
+}
+
+.form__accept--link {
+  border-bottom: #161644 solid .1rem;
+}
+
+.flex__child {
+  color: #161644;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.submit {
+  background: #0854bc;
+  font-size: 2rem;
+  font-weight: 600;
+  border: none;
+  width: 15rem;
+  margin-left: -1rem;
+}
+
+/********************
+CSS VAN RATING PAGINA
+********************/
+.bedankt__wrapper {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr auto 1fr;
+  height: 100vh;
+}
+
+.bedankt {
+  grid-area: 2 / 2 / 3 / 3;
+  text-align: center;
+}
+
+.bedankt__box__title {
+  font-size: 4rem;
+  font-family: fjalla-one;
+}
+
+.bedankt__box__text {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.bedankt__box__button {
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.bedankt__footer {
+  grid-area: 3 /1 / 4 / 4;
+}
